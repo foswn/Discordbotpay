@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NewebPay 付款跳轉</title>
+</head>
+<body>
+    <h2>正在跳轉至 NewebPay 付款頁面...</h2>
+    <form id="newebpay-form" method="post" action="https://core.newebpay.com/MPG/mpg_gateway">
+        <input type="hidden" name="MerchantID" value="你的商店編號">
+        <input type="hidden" name="RespondType" value="JSON">
+        <input type="hidden" name="TimeStamp" value="1739215457">
+        <input type="hidden" name="Version" value="2.0">
+        <input type="hidden" name="MerchantOrderNo" value="DISCORD1739215457">
+        <input type="hidden" name="Amt" value="1000">
+        <input type="hidden" name="ItemDesc" value="遊戲名稱: 原神">
+        <input type="hidden" name="Email" value="fixed@email.com">
+        <input type="hidden" name="CREDIT" value="0">
+        <input type="hidden" name="VACC" value="0">
+        <input type="hidden" name="BARCODE" value="0">
+        <input type="hidden" name="CVS" value="1">
+        <input type="hidden" name="ReturnURL" value="https://yourwebsite.com/return">
+        <input type="hidden" name="NotifyURL" value="https://yourwebsite.com/notify">
+        <input type="hidden" name="ClientBackURL" value="https://yourwebsite.com/thankyou">
+        <input type="hidden" name="CheckValue" value="AAA9146756A5FA67XXXXXX">
+        <button type="submit">點擊前往付款</button>
+    </form>
+
+    <script>
+        document.getElementById('newebpay-form').submit(); // 自動提交表單
+    </script>
+</body>
+</html>
